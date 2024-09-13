@@ -72,7 +72,11 @@ class _TodoListPageState extends State<TodoListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Todo List')),
+      appBar: AppBar(
+        title: Text('Todo List'),
+        backgroundColor: Color(0xFFDDDDDD),
+      ),
+      backgroundColor: Color(0xFFFFFDF2),
       body: Column(
         children: [
           Padding(
@@ -80,7 +84,7 @@ class _TodoListPageState extends State<TodoListPage> {
             child: TextField(
               controller: _controller,
               decoration: InputDecoration(
-                labelText: 'Nhập công việc',
+                labelText: 'Add work to do',
                 suffixIcon: IconButton(
                   icon: Icon(Icons.add),
                   onPressed: _addTodo,
